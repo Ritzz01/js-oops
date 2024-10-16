@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>OOPS In Javascript</h1>
+  </body>
+
+  <script>
+    // class Student {
+    //   i = 1;
+    //   static j = 1;
+
+    //   static main() {
+    //     let k = 0;
+    //     console.log(k);
+    //   }
+
+    //   abc()
+    //   {
+    //     let p=11;
+    //     console.log(p);
+
+    //   }
+    // }
+    // Student.main();
+    // console.log(Student.j);
+    // let m=new Student()
+    // m.abc()
+    // console.log(m.i);
+
+    // class Student{
+
+    //     static count=1;
+
+    //     details(name,age,gender)
+    //     {
+    //         this.name=name
+    //         this.age=age
+    //         this.gender=gender
+
+    //         console.log(`${this.name} ${this.age} ${this.gender}`);
+
+    //     }
+
+    //     total()
+    //     {
+    //         console.log(Student.count++);
+
+    //     }
+
+    // }
+
+    // let s1=new Student()
+    // s1.details("arya",12,"F")
+    // s1.total()
+
+    // let s2=new Student()
+    // s2.details("arya",12,"F")
+    // s2.total()
+
+    // let s3=new Student()
+    // s3.details("arya",12,"F")
+    // s3.total()
+
+    //function constructor
+
+    // function Student(name, age, gender) {
+    //   this.name = name;
+    //   this.age = age;
+    //   this.gender = gender;
+    // }
+
+    // Student.prototype.city="Patna"
+
+    // let a = new Student("Arya",11,"Female");
+    // console.log(a);
+
+    // console.log(a.city);
+
+    // console.log(a  instanceof Student);
+
+    // console.log(Student.prototype);
+
+    // console.log(a.__proto__);
+
+    // console.log(a.__proto__.__proto__);
+    // console.log(a.__proto__.__proto__.__proto__);
+
+    // console.log(a.hasOwnProperty("name"));
+
+    //constructor
+
+    // class Student {
+    //   constructor(name, year) {
+    //     this.name = name;
+    //     this.year = year;
+    //   }
+
+    //   calcAge() {
+    //     let yr = 2024 - this.year;
+    //     console.log(yr);
+    //   }
+    //   main() {
+    //     console.log(`${this.name} ${this.year}`);
+    //   }
+    // }
+
+    // let a = new Student("arya", 2005);
+    // a.main();
+    // a.calcAge();
+
+    //Constructor Overloading
+
+    // class Person{
+
+    //     constructor(name)
+    //     {
+    //         this.name=name
+    //         console.log(name);
+
+    //     }
+
+    //     static main()
+    //     {
+    //         new Person("Arya")
+    //         new Person("Ritika")
+    //     }
+    // }
+    // Person.main()
+
+    //Object.create
+
+    // let Student = {
+    //   details: function (name, age, gender) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.gender = gender;
+    //   },
+
+    //   greet: function () {
+    //     console.log("hello");
+    //   },
+
+    //   person:function()
+    //   {
+    //     console.log(`${this.name}, ${this.age} , ${this.gender}`);
+
+    //   }
+
+    // };
+    // let a = Object.create(Student);
+    // console.log(a);
+    // a.details("Arya",12,"F")
+    // a.person()
+
+    //function constructor inheritance
+
+    // function Person(name, age, gender) {
+    //   this.name = name;
+    //   this.age = age;
+    //   this.gender = gender;
+    // }
+
+    // function Student(name, age, gender, sid, classNo) {
+    //   Person.call(this,name, age, gender);
+    //   this.sid = sid;
+    //   this.classNo = classNo;
+    // }
+
+    // let s1=new Student("ritika",19,"f",101,8)
+    // console.log(s1);
+
+    //class inheritance
+
+    // class Person{
+    //     constructor(name,age,gender)
+    //     {
+    //         this.name=name
+    //         this.age=age
+    //         this.gender
+    //     }
+    // }
+
+    // class Student extends Person{
+    //     constructor(name,age,gender,sid,classNo)
+    //     {
+    //         super(name,age,gender)
+    //         this.sid=sid
+    //         this.classNo=classNo
+
+    //     }
+    // }
+
+    // let s1=new Student("Arya",19,"f",101,23)
+    // console.log(s1);
+
+    //overriding -changing parent non static method implementation in child
+
+    // class Animal {
+    //   walk() {
+    //     console.log("Runs");
+    //   }
+    // }
+
+    // class Frog extends Animal {
+    //   walk() {
+    //     console.log("Hops");
+    //   }
+    // }
+
+    // let s1=new Frog()
+    // console.log(s1);
+    // s1.walk()
+
+    //Reference type
+
+    // class A{
+    //     i=0
+    // }
+
+    // class Test{
+    //    static main() {
+    //         let a1=new A()
+    //         let a2=new A()
+    //         let a3=new A()
+
+    //         console.log(a1.i,a2.i,a2.i);
+
+    //     }
+    // }
+
+    // Test.main()
+
+    //Abadon object - No reference to memory
+
+    // class A {
+    //   i = 0;
+    // }
+
+    // class Test {
+    //   static main() {
+    //     let a1 = new A();
+    //     let a2 = new A();
+    //     let a3 = new A();
+    //     console.log(a1.i, a2.i, a2.i);
+
+    //     a1 = a2 = a3 = null;
+
+    //     console.log(a1, a2, a2);
+    //   }
+    // }
+
+    // Test.main();
+
+    //Factory Method
+
+    // class Car {
+    //   color;
+    //   constructor(color) {
+    //     this.color = color;
+    //   }
+    // }
+
+    // class Test {
+    //   static main() {
+    //     let a = new Car("Black");
+    //     return a;
+    //   }
+
+    //   static m()
+    //   {
+    //     let b=Test.main()
+    //     b.color="pink"
+    //     console.log(b);
+
+    //   }
+    // }
+
+    // Test.m();
+
+    //Abstraction and polymorphism
+
+    // class Animal{
+    //   speak(){}
+    //   walk(){}
+    // }
+
+    // class Frog extends Animal{
+    //   speak()
+    //   {
+    //     console.log("Speak");
+
+    //   }
+
+    //   walk()
+    //   {
+    //     console.log("Hop");
+
+    //   }
+    // }
+
+    // class Details{
+    //     details(c)
+    //     {
+    //       c.speak()
+    //       c.walk()
+    //     }
+    // }
+
+    // class Test{
+    //   static main()
+    //   {
+    //     let a=new Details()
+    //     a.details(new Frog())
+    //   }
+    // }
+    // Test.main()
+
+    //get and set
+
+    class Student {
+      constructor(id, name, age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+      }
+
+      get Ename()
+      {
+        return this.name
+      }
+
+       
+      set setName(val)
+      {
+        this.name=val
+      }
+    }
+
+    let a = new Student(101, "Arya", 19);
+    console.log(a);
+
+    console.log(a.Ename);
+
+    a.setName="Alu"
+    console.log(a.Ename);
+    
+    
+  </script>
+</html>
